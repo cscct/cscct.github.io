@@ -115,11 +115,27 @@
 		height: 1px;
 		background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
 	}
+
+	code {
+	font-family: Consolas,"courier new";
+	color: crimson;
+	background-color: #f1f1f1;
+	padding: 2px;
+	font-size: 105%;
+	}
+
+	.center {
+		margin: auto;
+		width: 50%;
+		border: 3px solid green;
+		padding: 10px;
+	}
+
 </style>
 
 <html>
 <head>
-	<a href="https://clustrmaps.com/site/1bpsb"  style="display: none;"><img src="//www.clustrmaps.com/map_v2.png?d=3q1nJvE3mSJq4d30LqbmDLOPYSD53wSL2qZiDf6oj8k&cl=ffffff" /></a>
+	<a target="_blank" href="https://clustrmaps.com/site/1bpsb"  style="display: none;"><img src="//www.clustrmaps.com/map_v2.png?d=3q1nJvE3mSJq4d30LqbmDLOPYSD53wSL2qZiDf6oj8k&cl=ffffff" /></a>
 	<title>Class-Incremental Learning with Cross-Space
 		Clustering and Controlled Transfer</title>
 	<meta property="og:image" content="Path to my teaser.png"/> <!-- Facebook automatically scrapes this. Go to https://developers.facebook.com/tools/debug/ if you update and want to force Facebook to rescrape. -->
@@ -143,36 +159,37 @@
 	<center>
 		<span style="font-size:36px">Class-Incremental Learning with Cross-Space
 			Clustering and Controlled Transfer</span>
-		<table align=center width=600px>
-			<table align=center width=600px>
+		<table align=center width=800px>
+			<table align=center width=800px>
 				<tr>
-					<td align=center width=100px>
+					<td align=center width=200px>
 						<center>
-							<span style="font-size:24px"><a href="https://en.wikipedia.org/wiki/James_J._Gibson">First Author</a></span>
+							<span style="font-size:24px"><a target="_blank" href="http://ashok-arjun.github.io">Arjun Ashok</a></span>
 						</center>
 					</td>
-					<td align=center width=100px>
+					<td align=center width=200px>
 						<center>
-							<span style="font-size:24px"><a href="https://en.wikipedia.org/wiki/James_J._Gibson">Second Author</a></span>
+							<span style="font-size:24px"><a target="_blank" href="https://josephkj.in">KJ Joseph</a></span>
 						</center>
 					</td>
-					<td align=center width=100px>
+					<td align=center width=300px>
 						<center>
-							<span style="font-size:24px"><a href="https://en.wikipedia.org/wiki/James_J._Gibson">Third Author</a></span>
+							<span style="font-size:24px"><a target="_blank" href="https://people.iith.ac.in/vineethnb/index.html">Vineeth N Balasubramanian</a></span>
 						</center>
 					</td>
 				</tr>
 			</table>
+			<p style="font-size:24px">Accepted at <span style="color:red">ECCV 2022</span></p>
 			<table align=center width=250px>
 				<tr>
 					<td align=center width=120px>
 						<center>
-							<span style="font-size:24px"><a href=''>[Paper]</a></span>
+							<span style="font-size:24px"><a target='_blank' href='https://arxiv.org/abs/2208.03767'>[Paper]</a></span>
 						</center>
 					</td>
 					<td align=center width=120px>
 						<center>
-							<span style="font-size:24px"><a href='https://github.com/richzhang/webpage-template'>[GitHub]</a></span><br>
+							<span style="font-size:24px"><a target='_blank' target="_blank" href='https://github.com/ashok-arjun/CSCCT'>[GitHub]</a></span><br>
 						</center>
 					</td>
 				</tr>
@@ -181,7 +198,7 @@
 	</center>
 
 	<center>
-		<table align=center width=850px>
+		<!-- <table align=center width=850px>
 			<tr>
 				<td width=260px>
 					<center>
@@ -189,31 +206,28 @@
 					</center>
 				</td>
 			</tr>
-		</table>
-		<table align=center width=850px>
+		</table> -->
+		<!-- <table align=center width=850px>
 			<tr>
-				<!-- <td>
-					This was a template originally made for <a href="http://richzhang.github.io/colorization/">Colorful Image Colorization</a>. The code can be found in this <a href="https://github.com/richzhang/webpage-template">repository</a>.
-				</td> -->
-				<td>More information about the paper will be added soon</td>
+				<td>In class-incremental learning, the model is expected to learn new classes continually while maintaining knowledge on previous classes. The challenge here lies in preserving the model's ability to effectively represent prior classes in the feature space, while adapting it to represent incoming new classes. We propose two distillation-based objectives for class incremental learning that leverage the structure of the feature space to maintain accuracy on previous classes, as well as enable learning the new classes. In our first objective, termed cross-space clustering (CSC), we propose to use the feature space structure of the previous model to characterize directions of optimization that maximally preserve the class - directions that all instances of a specific class should collectively optimize towards, and those that they should collectively optimize away from. Apart from minimizing forgetting, this indirectly encourages the model to cluster all instances of a class in the current feature space, and gives rise to a sense of herd-immunity, allowing all samples of a class to jointly combat the model from forgetting the class. Our second objective termed controlled transfer (CT) tackles incremental learning from an understudied perspective of inter-class transfer. CT explicitly approximates and conditions the current model on the semantic similarities between incrementally arriving classes and prior classes. This allows the model to learn classes in such a way that it maximizes positive forward transfer from similar prior classes, thus increasing plasticity, and minimizes negative backward transfer on dissimilar prior classes, whereby strengthening stability. We perform extensive experiments on two benchmark datasets, adding our method (CSCCT) on top of three prominent class-incremental learning methods. We observe consistent performance improvement on a variety of experimental settings.</td>
 			</tr>
-		</table>
+		</table> -->
 	</center>
 
 	<hr>
-<!-- 
+
 	<table align=center width=850px>
 		<center><h1>Abstract</h1></center>
 		<tr>
 			<td>
-				This is my abstract.
+				In class-incremental learning, the model is expected to learn new classes continually while maintaining knowledge on previous classes. The challenge here lies in preserving the model's ability to effectively represent prior classes in the feature space, while adapting it to represent incoming new classes. We propose two distillation-based objectives for class incremental learning that leverage the structure of the feature space to maintain accuracy on previous classes, as well as enable learning the new classes. In our first objective, termed cross-space clustering (CSC), we propose to use the feature space structure of the previous model to characterize directions of optimization that maximally preserve the class - directions that all instances of a specific class should collectively optimize towards, and those that they should collectively optimize away from. Apart from minimizing forgetting, this indirectly encourages the model to cluster all instances of a class in the current feature space, and gives rise to a sense of herd-immunity, allowing all samples of a class to jointly combat the model from forgetting the class. Our second objective termed controlled transfer (CT) tackles incremental learning from an understudied perspective of inter-class transfer. CT explicitly approximates and conditions the current model on the semantic similarities between incrementally arriving classes and prior classes. This allows the model to learn classes in such a way that it maximizes positive forward transfer from similar prior classes, thus increasing plasticity, and minimizes negative backward transfer on dissimilar prior classes, whereby strengthening stability. We perform extensive experiments on two benchmark datasets, adding our method (CSCCT) on top of three prominent class-incremental learning methods. We observe consistent performance improvement on a variety of experimental settings.
 			</td>
 		</tr>
 	</table>
 	<br>
 
 	<hr>
-	<center><h1>Talk</h1></center>
+	<!-- <center><h1>Talk </h1></center>
 	<p align="center">
 		<iframe width="660" height="395" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen align="center"></iframe>
 	</p>
@@ -222,14 +236,14 @@
 		<br>
 		<tr>
 			<center>
-				<span style="font-size:28px"><a href=''>[Slides]</a>
+				<span style="font-size:28px"><a target="_blank" href=''>[Slides]</a>
 				</span>
 			</center>
 		</tr>
 	</table>
 	<hr> -->
 
-	<!-- <center><h1>Code</h1></center>
+	<!-- <center><h1>Method</h1></center>
 
 	<table align=center width=420px>
 		<center>
@@ -257,39 +271,59 @@
 			</tr>
 		</center>
 	</table>
-	<table align=center width=800px>
-		<br>
-		<tr><center>
-			<span style="font-size:28px">&nbsp;<a href='https://github.com/richzhang/webpage-template'>[GitHub]</a>
-			</center>
-		</span>
-	</table>
 	<br>
 	<hr> -->
-	<table align=center width=450px>
-		<center><h1>Paper and Supplementary Material</h1></center>
+	<table align=center width=500px>
+		<center><h1>Paper</h1></center>
 		<tr>
-			<td><a href=""><img class="layered-paper-big" style="height:175px" src="./resources/paper.png"/></a></td>
-			<td><span style="font-size:14pt">F. Author, S. Author, T. Author.<br>
-				<b>Creative and Descriptive Paper Title.</b><br>
-				In Conference, 20XX.<br>
-				(hosted on <a href="">ArXiv</a>)<br>
-				<!-- (<a href="./resources/camera-ready.pdf">camera ready</a>)<br> -->
-				<span style="font-size:4pt"><a href=""><br></a>
-				</span>
+			<td><a target="_blank" href="https://arxiv.org/abs/2208.03767"><img class="layered-paper-big" style="height:175px" src="./resources/paper.png"/></a></td>
+			<td><span style="font-size:14pt">Arjun Ashok, K J Joseph, Vineeth Balasubramanian.<br>
+				<b>Class-Incremental Learning with Cross-Space Clustering and Controlled Transfer.</b><br>
+				In ECCV 2022.<br>
+				<!-- (hosted on <a target="_blank" href="">ArXiv</a>)<br> -->
+				<!-- (<a target="_blank" href="./resources/camera-ready.pdf">camera ready</a>)<br> -->
+				<!-- <span style="font-size:4pt"><a target="_blank" href=""><br></a>
+					
+				</span> -->
+				<br>
+				<span><a target="_blank" href='https://arxiv.org/abs/2208.03767'>[Paper]</a>
+				<span><a target="_blank" href='https://github.com/ashok-arjun/CSCCT'>[GitHub]</a>
 			</td>
 		</tr>
 	</table>
 	<br>
-
+	<hr>
+	<!-- <br> -->
+<!-- 
 	<table align=center width=600px>
 		<tr>
 			<td><span style="font-size:14pt"><center>
-				<a href="./resources/bibtex.txt">[Bibtex]</a>
+				<a target="_blank" href="./resources/bibtex.txt">[Bibtex]</a>
 			</center></td>
 		</tr>
 	</table>
 
+	<hr>
+	<br> -->
+
+	<table align=center width=900px>
+		<tr>
+			<td width=200px>
+				<left>
+					<center><h1>Bibtex</h1>
+					<p style="display:inline">
+					<code>
+						@article{ashok2022class,
+						title={Class-Incremental Learning with Cross-Space Clustering and Controlled Transfer},
+						author={Ashok, Arjun and Joseph, KJ and Balasubramanian, Vineeth},
+						journal={arXiv preprint arXiv:2208.03767},
+						year={2022}
+						}
+					</code></p></center>
+				</left>
+			</td>
+		</tr>
+	</table>
 	<hr>
 	<br>
 
@@ -297,8 +331,10 @@
 		<tr>
 			<td width=400px>
 				<left>
-					<center><h1>Acknowledgements</h1></center>
-					This template was originally made by for a <a href="http://richzhang.github.io/colorization/">colorful</a> ECCV project.
+					<center><h1>Acknowledgements</h1>
+					We are grateful to the Department of Science and Technology, India, as well as Intel India for the financial support of this project through the IMPRINT program (IMP/2019/000250) as well as the DST ICPS Data Science Cluster program. KJJ thanks TCS for their PhD Fellowship. We also thank the anonymous reviewers and Area Chairs for their valuable feedback in improving the presentation of this paper.
+					<br><br>
+					This template was originally made by for a <a target="_blank" href="http://richzhang.github.io/colorization/">colorful</a> ECCV project.</center>
 				</left>
 			</td>
 		</tr>
