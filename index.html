@@ -16,6 +16,11 @@
 		font-size:32px;
 		font-weight:300;
 	}
+
+	h2 {
+		font-size:24px;
+		font-weight:600;
+	}
 	
 	.disclaimerbox {
 		background-color: #eee;		
@@ -152,6 +157,17 @@
 
 		gtag('config', 'UA-75863369-6');
 	</script>
+
+	<script>
+	MathJax = {
+	  tex: {
+		inlineMath: [['$', '$'], ['\\(', '\\)']]
+	  }
+	};
+	</script>
+	<script id="MathJax-script" async
+	  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+	</script>
 </head>
 
 <body>
@@ -243,7 +259,18 @@
 	</table>
 	<hr> -->
 
-	<!-- <center><h1>Method</h1></center>
+	<center><h1>Method</h1></center>
+	<table align=center width=800px>
+		<center>
+			<tr>
+				<td>
+					We propose two distillation-based objectives for class incremental learning that leverage the structure of the feature space to maintain accuracy on previous classes, as well as enable learning the new classes.
+				</td>
+			</tr>
+		</center>
+	</table>
+
+	<center><h2>Cross-Space Clustering</h2></center>
 
 	<table align=center width=420px>
 		<center>
@@ -257,39 +284,53 @@
 		<tr>
 			<td align=center width=400px>
 				<center>
-					<td><img class="round" style="width:450px" src="./resources/method_diagram.png"/></td>
+					<td><img class="round" style="width:800px" src="./resources/figures/fig1.png"/></td>
 				</center>
 			</td>
 		</tr>
 	</table>
-	<table align=center width=850px>
+	<table align=center width=800px>
 		<center>
 			<tr>
 				<td>
-					Short description if wanted
+					<!-- Our Cross-Space Clustering (CSC) characterizes entire regions in the feature space that classes should stay away from, and
+					those that a class should belong to, and distills this information to the model.
+					Our objective indirectly establishes multiple goals at once: (i) it encourages the
+					model to cluster all instances of a given class; (ii) ensures that these clusters are
+					well-separated; and (iii) regularizes to preserve class cluster positions as a single entity in the feature space. This provides for a class-consolidated distillation objective, prodding instances of a given class to “unite” and thus prevent the
+					class from being forgotten. -->
+					Our <b>cross-space clustering (CSC)</b> objective alleviates forgetting by distilling
+					class-level semantics and inducing tight clusters in the feature space. CSC leverages points across the entire feature space of the previous model $ F^T_{t−1} $, to identify regions that a class is optimized to stay within, and other harmful regions
+					that it is prevented from drifting towards.
 				</td>
 			</tr>
 		</center>
 	</table>
-	<br>
-	<hr> -->
-	<table align=center width=500px>
-		<center><h1>Paper</h1></center>
+
+	<center><h2>Controlled Transfer</h2></center>
+	<table align=center width=400px>
 		<tr>
-			<td><a target="_blank" href="https://arxiv.org/abs/2208.03767"><img class="layered-paper-big" style="height:175px" src="./resources/paper.png"/></a></td>
-			<td><span style="font-size:14pt">Arjun Ashok, K J Joseph, Vineeth Balasubramanian.<br>
-				<b>Class-Incremental Learning with Cross-Space Clustering and Controlled Transfer.</b><br>
-				In ECCV 2022.<br>
-				<!-- (hosted on <a target="_blank" href="">ArXiv</a>)<br> -->
-				<!-- (<a target="_blank" href="./resources/camera-ready.pdf">camera ready</a>)<br> -->
-				<!-- <span style="font-size:4pt"><a target="_blank" href=""><br></a>
-					
-				</span> -->
-				<br>
-				<span><a target="_blank" href='https://arxiv.org/abs/2208.03767'>[Paper]</a>
-				<span><a target="_blank" href='https://github.com/ashok-arjun/CSCCT'>[GitHub]</a>
+			<td align=center width=400px>
+				<center>
+					<td><img class="round" style="width:800px" src="./resources/figures/fig2.png"/></td>
+				</center>
 			</td>
 		</tr>
+	</table>
+	<table align=center width=800px>
+		<center>
+			<tr>
+				<td>
+					<center>
+						Our <b>Controlled Transfer (CT)</b> objective controls and regularizes transfer of features
+						between classes at a fine-grained level. We formulate an objective that approximates the relative similarity between an incoming class and all previous classes,
+						and conditions the current task's model on these estimated similarities. This
+						encourages new classes to be situated optimally in the feature space, ensuring
+						maximal positive transfer and minimal negative transfer.
+					</center>
+				</td>
+			</tr>
+		</center>
 	</table>
 	<br>
 	<hr>
@@ -305,6 +346,82 @@
 
 	<hr>
 	<br> -->
+
+	<center><h1>Results</h1></center>
+
+	<table align=center width=420px>
+		<center>
+			<tr>
+				<td>
+				</td>
+			</tr>
+		</center>
+	</table>
+	<table align=center width=400px>
+		<tr>
+			<td align=center width=400px>
+				
+				<center>
+					<td>
+						<center><b>Results on CIFAR-100</b> 
+						<!-- <br>Our method is added to three
+						top-performing approaches. The red subscript highlights the relative improvement. B denotes the number of classes in the first task. C denotes the number of
+						classes in every subsequent task.  -->
+						</center>
+						<img class="round" style="width:600px" src="./resources/tables/tab1_with_caption.png"/></td>
+				</center>
+			</td>
+		</tr>
+	</table>
+	<br><br>
+	<table align=center width=400px>
+		<tr>
+			<td align=center width=400px>
+				
+				<center>
+					<td>
+						<center><b>Results on ImageNet-Subset</b> 
+						<!-- <br>Our method is added to three
+						top-performing approaches. The red subscript highlights the relative improvement. B denotes the number of classes in the first task. C denotes the number of
+						classes in every subsequent task.  -->
+						</center>
+						<img class="round" style="width:600px" src="./resources/tables/tab2_with_caption.png"/></td>
+				</center>
+			</td>
+		</tr>
+	</table>
+	<!-- <table align=center width=850px>
+		<center>
+			<tr>
+				<td>
+					Short description if wanted
+				</td>
+			</tr>
+		</center>
+	</table> -->
+	<br>
+	<hr>
+	<table align=center width=500px>
+		<center><h1>Paper</h1></center>
+		<tr>
+			<td><a target="_blank" href="https://arxiv.org/abs/2208.03767"><img class="layered-paper-big" style="height:175px" src="./resources/paper.png"/></a></td>
+			<td>
+				<span style="font-size:14pt">Arjun Ashok, K J Joseph, Vineeth Balasubramanian.<br>
+				<b>Class-Incremental Learning with Cross-Space Clustering and Controlled Transfer.</b><br>
+				In ECCV 2022.<br>
+				<!-- (hosted on <a target="_blank" href="">ArXiv</a>)<br> -->
+				<!-- (<a target="_blank" href="./resources/camera-ready.pdf">camera ready</a>)<br> -->
+				<!-- <span style="font-size:4pt"><a target="_blank" href=""><br></a>
+					
+				</span> -->
+				<br>
+				<span><a target="_blank" href='https://arxiv.org/abs/2208.03767'>[Paper]</a>
+				<span><a target="_blank" href='https://github.com/ashok-arjun/CSCCT'>[GitHub]</a>
+			</td>
+		</tr>
+	</table>
+	<br>
+	<hr>
 
 	<table align=center width=900px>
 		<tr>
